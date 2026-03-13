@@ -1,7 +1,26 @@
+@import "./styles/theme.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* opcional: fondo por defecto */
-html, body, #root { height: 100%; }
-body { margin: 0; }
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer components {
+  .card-surface {
+    border: 1px solid rgb(255 255 255 / 0.08);
+    border-radius: var(--radius-base);
+    background: color-mix(in oklab, var(--color-surface) 80%, black);
+  }
+}
