@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* opcional: fondo por defecto */
+html, body, #root { height: 100%; }
+body { margin: 0; }
